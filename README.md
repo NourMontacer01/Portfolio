@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-# Portfolio
-This is my personal portfolio . I've done it using React as a frontend library , using the following technologies : next , axios ,tailwind css
-=======
 <p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
+    <img height="100" >
 </p>
 
 ---
@@ -21,7 +17,7 @@ This is my personal portfolio . I've done it using React as a frontend library ,
 
 ![](./public/image/screen.png)
 
-## View live preview [here](https://abusaid.netlify.app/).
+
 
 ---
 
@@ -158,4 +154,3 @@ export const personalData = {
 |    tailwindcss     |
 
 ---
->>>>>>> 3401364 (Initial commit)

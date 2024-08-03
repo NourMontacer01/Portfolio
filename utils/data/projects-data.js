@@ -42,7 +42,7 @@ export const projectsData = [
         demo: '',  // Link to a live demo of the project (if available)
         image: 'path/to/image.png',  // Path to an image representing the project
         role: 'Front-end Developer',
-    }
+    },
    
     {
         id: 3,  // Unique identifier for the project
@@ -58,23 +58,9 @@ export const projectsData = [
         role: 'Full Stack Developer',
         demo: '',
        
-    },
+    }
 
-    {
-        id: 4,  // Unique identifier for the project
-         name: 'Movies Management System',
-         description: "The Film Management System is a dynamic application designed to manage a catalog of films, catering to the needs of movie libraries or production companies. Built using Spring Boot and Maven, the system provides a seamless experience for managing film data.",
-         tools: [  'Spring Boot',
-        'Maven',
-        'Java',
-        'PostgreSQL',
-        'Thymeleaf',  
-        'Swagger'],
-        code: '',
-        role: 'Full Stack Developer',
-        demo: '',
-      
-    },
+   
 
     
     
