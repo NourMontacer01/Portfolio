@@ -15,7 +15,7 @@
 
 # Demo :movie_camera:
 
-![](./public/image/screen.png)
+![](./public/image/capture.png)
 
 
 
