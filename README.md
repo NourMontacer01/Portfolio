@@ -1,156 +1,76 @@
-<p align="center" width="100%">
-    <img height="100" >
-</p>
+# 👨‍💻 Nour Montacer — Developer Portfolio
 
----
-# [Built Portfolio With GitHub ](https://github.com/said7388/github-portfolio)
+[![CI](https://github.com/NourMontacer01/Portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/NourMontacer01/Portfolio/actions/workflows/ci.yml)
+![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 
----
+My personal portfolio: who I am, my experience, skills, projects, education, latest blog posts
+from dev.to and a contact form that sends straight to my inbox.
 
-# Developer Portfolio
+![Portfolio preview](./public/image/capture.png)
 
-### Are you struggling to create a professional portfolio website? Look no further! You can use the Developer Portfolio template and create your very own personalized portfolio today! My website is designed to be user-friendly and easily customizable, making it perfect for both developers and freelancers.
+## 📑 Sections
 
----
+| Section | Content |
+| --- | --- |
+| **Hero** | Name, role, social links and résumé download |
+| **About** | Short presentation |
+| **Experience** | Positions with a Lottie animation |
+| **Skills** | Scrolling marquee of technologies |
+| **Projects** | Featured projects with stack and links |
+| **Education** | Degrees and schools |
+| **Blog** | Latest articles fetched from dev.to |
+| **Contact** | EmailJS form, optionally protected by reCAPTCHA |
 
-# Demo :movie_camera:
+## 🧱 Tech stack
 
-![](./public/image/capture.png)
+- **Next.js 14** (App Router) and **React 18**
+- **Tailwind CSS** + **Sass**
+- **EmailJS** for the contact form, **Google reCAPTCHA v2** (optional)
+- **lottie-react**, **react-fast-marquee**, **react-icons**, **react-toastify**
+- **Google Tag Manager** for analytics (optional)
 
+## 🚀 Run it locally
 
-
----
-
-## Table of Contents :scroll:
-
-- [Sections](#sections-bookmark)
-- [Demo](#demo-movie_camera)
-- [Installation](#installation-arrow_down)
-- [Getting Started](#getting-started-dart)
-- [Usage](#usage-joystick)
-- [Packages Used](#packages-used-package)
-
----
-
-# Sections :bookmark:
-
-- HERO SECTION
-- ABOUT ME
-- EXPERIENCE
-- SKILLS
-- PROJECTS
-- EDUCATION
-- BLOG
-- CONTACTS
-
----
-
-# Installation :arrow_down:
-
-### You will need to download Git and Node to run this project
-
-- [Git](https://git-scm.com/downloads)
-- [Node](https://nodejs.org/en/download/)
-
-#### Make sure you have the latest version of both Git and Node on your computer.
-
-```
-node --version
-git --version
-```
-
-## <br />
-
-# Getting Started :dart:
-
-### Fork and Clone the repo
-
-To Fork the repo click on the fork button at the top right of the page. Once the repo is forked open your terminal and perform the following commands
-
-```
-git clone https://github.com/<YOUR GITHUB USERNAME>/developer-portfolio.git
-
-cd developer-portfolio
-```
-
-### Install packages from the root directory
+Requirements: Node.js 18+.
 
 ```bash
+git clone https://github.com/NourMontacer01/Portfolio.git
+cd Portfolio
 npm install
-# or
-yarn install
-```
-
-Then, run the development server:
-
-```bash
+cp .env.example .env.local   # then fill in your values
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
----
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Development server |
+| `npm run build` | Production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | ESLint |
 
-# Usage :joystick:
+## 🔐 Environment variables
 
-Goto [emailjs.com](https://www.emailjs.com/) and create a new account for the mail sending. In free trial you will get 200 mail per month. After setup `emailjs` account, Please create a new `.env` file from `.env.example` file.
+See [`.env.example`](.env.example).
 
-Eg:
+| Variable | Required | Notes |
+| --- | --- | --- |
+| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` / `_TEMPLATE_ID` / `_PUBLIC_KEY` | Yes, for the contact form | From your [EmailJS](https://www.emailjs.com) account |
+| `NEXT_PUBLIC_APP_URL` | Yes | Base URL used to call `/api/google` |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | No | Turns on the captcha when set |
+| `RECAPTCHA_SECRET_KEY` | With the site key | **Server-side only** — never prefix it with `NEXT_PUBLIC_` |
+| `NEXT_PUBLIC_GTM` | No | Google Tag Manager id |
 
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID =
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID =
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY =
-NEXT_PUBLIC_GTM = # For site analytics
-NEXT_PUBLIC_APP_URL = "http://127.0.0.1:3000"
-NEXT_PUBLIC_RECAPTCHA_SECRET_KEY = # For captcha verification on contact form
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY =
-```
+## ✏️ Customise the content
 
-### Then, Customize data in the `utils/data` [folder](https://github.com/said7388/developer-portfolio/tree/main/utils/data).
+All the content lives in [`utils/data`](utils/data):
+`personal-data.js`, `experience.js`, `skills.js`, `projects-data.js`, `educations.js` and `contactsData.js`.
+`devUsername` in `personal-data.js` is the dev.to account the blog section reads from.
 
-Eg:
+## 🙏 Credits
 
-```javascript
-export const personalData = {
-  name: "Nour Montacer",
-  profile: '/profile.png',
-  logo:'/profile.png',
-  designation: "Software Developer",
-  description: "My name is Nour Montacer. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'nourmontacer10@gmail.com',
-  phone: '+216 28 703 886',
-  address: 'Sousse, Tunisia',
-  github: 'https://github.com/NourMontacer01',
-  facebook: 'https://www.facebook.com/nour.montacer.52/',
-  linkedIn: 'https://www.linkedin.com/in/10montacer10nour10/',
-  twitter: 'https://x.com/nourmontacer',
-  stackOverflow: 'https://stackoverflow.com/users/25710770/montacer01-nour',
-  leetcode: "https://leetcode.com/u/Nourmontacer01/",
-  devUsername: "Nour Montacer",
-  resume: "https://drive.google.com/file/d/1WE3euELEj8lHloOLeAdszPyneJuy1eYX/view?usp=drive_open"
-}
-```
-
-`devUsername` Used for fetching blog from `dev.to`.
-
----
-
----
-
-# Packages Used :package:
-
-| Used Package List  |
-| :----------------: |
-|        next        |
-|  @emailjs/browser  |
-|    lottie-react    |
-| react-fast-marquee |
-|    react-icons     |
-|   react-toastify   |
-|        sass        |
-|    tailwindcss     |
-
----
+Built on top of the open-source [developer-portfolio](https://github.com/said7388/developer-portfolio) template by Abu Said,
+then customised with my own content, fixes and tooling.
